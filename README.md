@@ -1,16 +1,12 @@
-# chating_app
+# chat_app
 
 A new Flutter project.
 
-## Getting Started
+## build authantifcation featcher
+### In login view 
+### Custom things that make the building more easer and maintainablethat i Used : 
+1-using custom textForm field 
+![Screenshot (218)](https://github.com/user-attachments/assets/9392bd09-fa74-4fa7-aaf0-35498528a41c)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2-using App style class 
+3-Named routes by id 
