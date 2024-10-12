@@ -1,4 +1,5 @@
 import 'package:chating_app/authintication/views/view/login_view.dart';
+import 'package:chating_app/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 class MyChatApp extends StatelessWidget {
@@ -11,7 +12,10 @@ class MyChatApp extends StatelessWidget {
         title: 'Flutter chat app',
         theme: ThemeData(scaffoldBackgroundColor: Colors.black12),
         initialRoute: LoginView.id,
-        routes: {LoginView.id: (BuildContext context) => LoginView()},
-        home: LoginView());
+        routes: {
+          LoginView.id: (BuildContext context) => const LoginView(),
+          HomeView.id: (BuildContext context) => const HomeView()
+        },
+        home: const LoginView());
   }
 }
