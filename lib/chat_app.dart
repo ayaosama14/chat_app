@@ -1,4 +1,5 @@
 import 'package:chating_app/authintication/views/view/login_view.dart';
+import 'package:chating_app/authintication/views/view/register_view.dart';
 import 'package:chating_app/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,8 @@ class MyChatApp extends StatelessWidget {
         initialRoute: LoginView.id,
         routes: {
           LoginView.id: (BuildContext context) => const LoginView(),
-          HomeView.id: (BuildContext context) => const HomeView()
+          RegisterView.id: (BuildContext context) => const RegisterView(),
+          HomeView.id: (BuildContext context) => const HomeView(),
         },
         home: const LoginView());
   }
