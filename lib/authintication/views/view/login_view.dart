@@ -1,5 +1,7 @@
+import 'package:chating_app/authintication/views/view/register_view.dart';
 import 'package:chating_app/authintication/views/widget/custom_text_field.dart';
 import 'package:chating_app/core/spacer.dart';
+import 'package:chating_app/core/app_style.dart';
 import 'package:chating_app/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +22,7 @@ class _LoginViewState extends State<LoginView> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   bool isLoading = false;
+  bool isSecured = true;
   @override
   @override
   void dispose() {
@@ -64,6 +67,7 @@ class _LoginViewState extends State<LoginView> {
               const Center(
                 child: Text(
                   'sign in to continue',
+                  style: AppStyle.thinTextStyle,
                 ),
               ),
               spacerH20,
@@ -84,13 +88,28 @@ class _LoginViewState extends State<LoginView> {
               CustomTextField(
                 hint: 'password',
                 prefixIcon: Icons.lock,
-                suffixIcon: const Icon(Icons.remove_red_eye_outlined),
                 myController: passwordController,
                 validator: (String? value) {
                   return (value!.isEmpty || value.length <= 4)
                       ? 'should be less that 4 charachter'
                       : null;
                 },
+                isSecure: isSecured,
+                suffixIcon: isSecured
+                    ? IconButton(
+                        onPressed: () {
+                          isSecured = false;
+                          setState(() {});
+                        },
+                        icon: const Icon(Icons.visibility_off),
+                      )
+                    : IconButton(
+                        onPressed: () {
+                          isSecured = true;
+                          setState(() {});
+                        },
+                        icon: const Icon(Icons.remove_red_eye_outlined),
+                      ),
               ),
               spacerH20,
               SizedBox(
@@ -101,10 +120,26 @@ class _LoginViewState extends State<LoginView> {
                   },
                   child: const Text(
                     "sign in ",
-                    style: TextStyle(fontSize: 18),
+                    style: AppStyle.thinColorTextStyle,
                   ),
                 ),
-              )
+              ),
+              spacerH20,
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                const Text(
+                  'Don\'t have account? ',
+                  style: AppStyle.thinTextStyle,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, RegisterView.id);
+                  },
+                  child: const Text(
+                    ' Register',
+                    style: AppStyle.boldColorTextStyle,
+                  ),
+                ),
+              ]),
             ],
           ),
         ),
