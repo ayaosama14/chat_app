@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "378372984849",
+    "project_id": "chat-app-8dc47",
+    "storage_bucket": "chat-app-8dc47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378372984849:android:0e16eec97cf1ed5d7ca1b0",
+        "android_client_info": {
+          "package_name": "com.ayaosama.chating_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeUJHErRf8Ttuv2kz2odhx8vR7CHFWlU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
