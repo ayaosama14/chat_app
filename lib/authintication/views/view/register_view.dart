@@ -148,3 +148,4 @@ class _RegisterViewState extends State<RegisterView> {
     );
   }
 }
+//.bat configure
